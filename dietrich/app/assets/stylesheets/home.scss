@@ -1,13 +1,49 @@
 // Home Template CSS
-@mixin transition($transition...) {
-    -moz-transition:    $transition;
-    -o-transition:      $transition;
-    -webkit-transition: $transition;
-    transition:         $transition;
+@import "variables";
+
+.past-jumbo{
+  background-color: rgba(0,0,0,0.5);
+  height: 50px;
+  #logo{
+    height:100%;
+    padding:0 0 0 10px;
+    background-color:transparent;
+    img{
+      height:50px;
+    }
+  }
+}
+
+.jumbotron {
+  background: image-url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 90%;
+  margin-bottom:0;
+}
+
+#cta{
+  background-color: #F4F4F4;
+  padding: 50px 0;
+}
+
+#statistics{
+  background: rgba(0,0,0,0.5);
+  padding:50px 0;
+  margin-bottom:70px;
+  text-align:center;
+  img{
+    padding:20px;
+  }
 }
 
 #userphotos{
-  padding: 50px 0;
+  padding: 0 0 50px;
+  background-image: image-url("bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment:fixed;
+  color:#fff;
   .image{
     margin-bottom:20px;
     text-align: center;
@@ -25,19 +61,26 @@
   }
 }
 
-.wrapper{
-  background-image: image-url("bg2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment:fixed;
+.btn-outline{
+  background-color: transparent;
+  color:#fff;
+  font-weight:100;
 }
 
-@media (min-width:800px){
+// Column Breakpoint
+@media (min-width:992px){
+  #statistics img{
+    padding:0;
+  }
+}
+
+// Menu Breakpoint
+@media (min-width:767px){
   #navbar{
     background: transparent;
     .nav li{
       > a {
-        font-size: 16px;
+        font-size: 18px;
         background: transparent;
       }
       &.active {

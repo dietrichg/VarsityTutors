@@ -29,6 +29,7 @@
           inView = top < jumH, // is jumbotron in view?
           piv    = Math.round((jumH - top) / jumH * 100) / 100; // Percent of the image in view
 
+      // Only trigger repaint if inView
       if(inView){
         $jumbo.css({
           "background-position" : "center " + (top*0.5) + "px", // Parallax Background Effect
