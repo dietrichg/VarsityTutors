@@ -2,19 +2,73 @@
   * Header Section
   */
 
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+
+#logo {
+  @include transition(background-color .2s ease-in-out);
+  background-color:rgba(0,0,0,0.5);
+  padding:10px;
+  display:inline-block;
+  img {
+    @include transition(height .2s ease-in-out);
+    height:80px;
+  }
+}
+
+#cta{
+  background-color: #F4F4F4;
+  padding: 50px 0;
+}
+
+// Navbar
+.navbar-default{
+  background-color: transparent;
+  border-bottom: 0px;
+  .navbar-collapse, .navbar-default .navbar-form {
+    border:0;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color:#14b4c7;
+  }
+  .navbar-nav > li > a {
+    @include transition(color .2s ease-in-out,background-color .2s ease-in-out);
+    color: rgba(255,255,255,0.5);
+  }
+  .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: rgba(255,255,255,0.85);
+    background-color: rgba(0,0,0,0.5);
+  }
+}
+
+.navbar-header{
+  @include transition(background-color .2s ease-in-out);
+}
+
+.past-jumbo{
+  background-color: rgba(0,0,0,0.5);
+  height: 50px;
+  #logo{
+    height:100%;
+    padding:0 0 0 10px;
+    background-color:transparent;
+    img{
+      height:50px;
+    }
+  }
+}
+
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
   margin-bottom: 20px;
-}
-
-#logo {
-  background:rgba(0,0,0,0.5);
-  padding:20px;
-  display:inline-block;
-  img {
-    max-height:99px;
-  }
 }
 
 .jumbotron {
@@ -22,4 +76,5 @@
   background-size: cover;
   background-position: center;
   height: 90%;
+  margin-bottom:0;
 }

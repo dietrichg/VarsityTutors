@@ -3,9 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'variables';
 
 html,body{
   height:100%;
+  font-family: $sans-serif;
 }
-@import 'variables';
+
 @import 'header';
