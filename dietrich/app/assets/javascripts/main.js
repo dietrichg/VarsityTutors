@@ -37,7 +37,7 @@
       }
 
       // Add header class if past jumbotron
-      var MENU_HEIGHT = 120, // desired menu height trigger point
+      var MENU_HEIGHT = 100, // desired menu height trigger point
           action = top < (jumH-MENU_HEIGHT) ? "removeClass" : "addClass";
       $nav[action]("past-jumbo");
 
