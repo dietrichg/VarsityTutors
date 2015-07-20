@@ -67,10 +67,42 @@
   font-weight:100;
 }
 
+.row.form{
+  padding:50px 0;
+  h2{
+    margin-top:0;
+  }
+  .col-md-8{
+    >div{
+        margin: 19px 0 5px;
+    }
+  }
+}
+
+label{
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
 // Column Breakpoint
 @media (min-width:992px){
   #statistics img{
     padding:0;
+  }
+}
+@media (max-width:992px){
+  .row.share{
+    text-align:center;
+  }
+  .col-md-4{
+    text-align:center;
+  }
+  .col-md-8{
+    text-align:center;
+    >div{
+        text-align:center;
+    }
   }
 }
 

@@ -75,25 +75,26 @@
   </div> <!-- /.container -->
 </div><!-- /#userphotos -->
 <div id="contact" class="container">
-  <div class="form">
+  <div class="row form">
     <form>
       <div class="col-md-4">
-        <h2 class="featurette-heading">Pre-Order Diet-Rich</span></h2>
+        <h2 class="featurette-heading">Pre-Order New Diet-Rich!</span></h2>
         <p class="lead">Get on the wait list to try the new upcoming Diet line by Rich.</p>
+        <button type="submit" class="btn btn-lg btn-danger">Pre-Order</button>
       </div>
       <div class="col-md-8">
         <div class="col-md-6">
           <label for="name">Name</label>
-          <input name="name" type="text" class="form-control">
+          <input required name="name" type="text" class="form-control">
         </div>
         <div class="col-md-6">
           <label for="sub">Email</label>
-          <input name="sub" type="text" class="form-control">
+          <input required name="sub" type="email" class="form-control">
         </div>
         <div class="col-md-12">
           <label for="msg">Favorite Non Diet Flavor</label>
-          <select name="flav" class="form-control">
-            <option disabled>Select Flavor</option>
+          <select required name="flav" class="form-control">
+            <option value="" selected disabled>Select Flavor</option>
             <option value="br">Blue Raspberry</option>
             <option value="lc">Lemon Citron</option>
             <option value="sr">Strawberry Rush</option>
