@@ -67,6 +67,22 @@
   font-weight:100;
 }
 
+.btn-rich-holder{
+  text-align: center;
+}
+.btn-rich{
+  @include transition(background-color 0.2s ease-in-out);
+  margin-top: 56px;
+  padding: 20px 35px;
+  border-radius: 0;
+  font-size: 30px;
+  background-color: #14b4c7;
+  border: 0;
+  &:hover{
+    background-color:#0F92A1;
+  }
+}
+
 .row.form{
   padding:50px 0;
   h2{
